@@ -1,14 +1,14 @@
 
-CREATE SEQUENCE public.postin_tyyppi_tyyppikoodi_seq_1;
+CREATE SEQUENCE public.postin_tyyppi_tyyppikoodi_seq;
 
 CREATE TABLE public.postin_tyyppi (
-                tyyppikoodi INTEGER NOT NULL DEFAULT nextval('public.postin_tyyppi_tyyppikoodi_seq_1'),
+                tyyppikoodi INTEGER NOT NULL DEFAULT nextval('public.postin_tyyppi_tyyppikoodi_seq'),
                 tyyppinimitys VARCHAR(30) NOT NULL,
                 CONSTRAINT psotin_tyyppi_pk PRIMARY KEY (tyyppikoodi)
 );
 
 
-ALTER SEQUENCE public.postin_tyyppi_tyyppikoodi_seq_1 OWNED BY public.postin_tyyppi.tyyppikoodi;
+ALTER SEQUENCE public.postin_tyyppi_tyyppikoodi_seq OWNED BY public.postin_tyyppi.tyyppikoodi;
 
 CREATE TABLE public.henkilo (
                 opiskelijanumero VARCHAR(8) NOT NULL,
